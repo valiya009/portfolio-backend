@@ -16,12 +16,7 @@ const app = express();
 dotenv.config({ path: "./config/config.env" });
 
 app.use((req, res, next) => {
-  const allowedOrigins = [
-    "http://localhost:5173",
-    "http://localhost:5174",
-    "https://portfolio-web-eight-self.vercel.app",
-    "https://chandresh-dashboard.vercel.app",
-  ];
+  const allowedOrigins = ["*"];
 
   const origin = req.headers.origin;
   if (allowedOrigins.includes(origin)) {
