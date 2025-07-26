@@ -16,7 +16,21 @@ const app = express();
 dotenv.config({ path: "./config/config.env" });
 
 app.use((req, res, next) => {
-  const allowedOrigins = ["*"];
+  const allowedOrigins = [
+    "http://localhost:5173",
+    "http://localhost:5174",
+    "https://portfolio-web-henna-delta.vercel.app",
+    "https://chandresh-dashboard.vercel.app",
+  ];
+
+  const cors = require("cors");
+
+  app.use(
+    cors({
+      origin: "https://portfolio-web-henna-delta.vercel.app",
+      credentials: true, // Allow cookies and credentials
+    })
+  );
 
   const origin = req.headers.origin;
   if (allowedOrigins.includes(origin)) {
