@@ -19,7 +19,7 @@ app.use(
   cors({
     origin: [
       `https://portfolio-web-eight-self.vercel.app`,
-      `https://chandresh-dashboard-nrdm.vercel.app/`,
+      `https://chandresh-dashboard-nrdm.vercel.app/login`,
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
