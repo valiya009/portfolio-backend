@@ -20,7 +20,7 @@ app.use(
     origin: [
       "http://localhost:5173",
       "http://localhost:5174",
-      "https://chandresh-dashboard.vercel.app",
+      "https://portfolio-web-rexk.vercel.app",
       "https://portfolio-web-tawny-beta.vercel.app",
     ],
     credentials: true,
